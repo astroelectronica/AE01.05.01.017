@@ -1,0 +1,13 @@
+.title KiCad schematic
+.include "models/C2012X7R2A104K125AA_p.mod"
+.include "models/C3216X5R1C106M160AA_p.mod"
+.include "models/C3216X7R2A105M160AA_p.mod"
+.include "models/ZMR500.spice.txt"
+V1 /VIN 0 {Vsupply}
+XU2 /VIN 0 C3216X7R2A105M160AA_p
+XU3 /VIN 0 C2012X7R2A104K125AA_p
+XU1 /VIN 0 /VOUT ZMR500
+XU4 /VOUT 0 C3216X5R1C106M160AA_p
+I1 /VOUT 0 {Iload}
+XU5 /VOUT 0 C2012X7R2A104K125AA_p
+.end
